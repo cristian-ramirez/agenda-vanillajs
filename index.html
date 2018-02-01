@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Agenda</title>
+        <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Montserrat:100,300,400,500,700"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/app.css">
+    </head>
+
+
+    <body>
+        <div class="wrapper">
+            <main>
+                <div class="toolbar">
+                    <div class="toggle">
+                        <div class="toggle__option" id="toggle__day" data-view="day">day</div>
+                        <div class="toggle__option" id="toggle__week" data-view="week">week</div>
+                        <div class="toggle__option active" id="toggle__month" data-view="month">month</div>
+                    </div>
+
+                    <div class="event">
+                        <div class="event__title">
+                            <h2>Events</h2>
+                        </div>
+                        <div class="event__form">
+                            <div class="event__texts">
+                                <input type="text" id="eventTitle" class="event__text" placeholder="Event's name" disabled>
+                                <input type="text" id="eventDate" class="event__text" disabled>
+                            </div>
+                            <div class="event__time">
+                                <input type="time" id="startTime" class="event__time" step="1800" disabled>
+                                <label for="startTime">Start event</label>
+                            </div>
+                            <div class="event__time">
+                                <input type="time" id="endTime" class="event__time" step="1800" disabled>
+                                <label for="endTime">End event</label>
+                            </div>
+                            <button id="button__save" disabled>Save</button>
+                        </div>
+                    </div>
+
+                    <div id="current-month">June 2016</div>
+                </div>
+                <div id="calendar" class="calendar">
+                    <div id="calendar__header" class="calendar__header">
+                        <div>sun</div>
+                        <div>mon</div>
+                        <div>tue</div>
+                        <div>wed</div>
+                        <div>thu</div>
+                        <div>fri</div>
+                        <div>sat</div>
+                    </div>
+                    <div id="calendar__body"></div>
+                </div>
+            </main>
+        </div>
+        <script src="js/app.js"></script>
+    </body>
+
+</html>
